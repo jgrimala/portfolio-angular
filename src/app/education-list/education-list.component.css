@@ -1,0 +1,53 @@
+.masthead {
+  min-height: 100vh;
+  background: linear-gradient(rgb(72, 120, 168) 0%, rgb(200, 255, 0) 115%),
+    linear-gradient(to right, rgb(0, 105, 175) 0%, rgb(255, 0, 34) 100%);
+  background-blend-mode: screen;
+}
+
+.container-fluid {
+  box-sizing: border-box;
+  background-color: rgb(134, 139, 84);
+  background-image: url('../../assets/images/bridge-246913_1920.jpg');
+  background-blend-mode: multiply;
+  mix-blend-mode: darken;
+}
+
+.myRow1 {
+  margin-top: 12vh;
+}
+
+.myRow2 {
+  margin-top: 5vh;
+}
+
+.myListGroup {
+  margin: 0 auto;
+  padding: 3vh 2vw;
+}
+
+h2 {
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+.myButton {
+  width: 55vw;
+  padding: 0.6rem;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+@supports (backdrop-filter: none) {
+  .myListGroup {
+    backdrop-filter: hue-rotate(-40deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .myButton, h3 {
+    width: 100%;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "portfoliogrimala": {
+      "hosting": {
+        "portfolioApp": [
+          "portfoliogrimala"
+        ]
+      }
+    }
+  }
+}

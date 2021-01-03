@@ -1,0 +1,92 @@
+.masthead {
+  width: 100%;
+  background: linear-gradient(rgb(72, 120, 168) 0%, rgb(200, 255, 0) 115%),
+    linear-gradient(to right, rgb(0, 105, 175) 0%, rgb(255, 0, 34) 100%);
+  background-blend-mode: screen;
+}
+
+.container-fluid {
+  margin: 0;
+  background-color: rgb(52, 58, 64);
+  background-image: url('../../assets/images/sports-1452965_1920_2.jpg');
+  background-blend-mode: multiply;
+  width: 100%;
+  mix-blend-mode: hard-light;
+}
+
+.row {
+  justify-content: center;
+  margin: 12vh auto;
+}
+
+.myCol {
+  padding: 2vh 5vw;
+}
+
+.listButton {
+  display: block;
+  text-align: center;
+  border-style: none;
+  background: transparent;
+  margin: auto;
+  width: 100%;
+}
+
+.listButton:focus {
+  outline: none;
+}
+
+h4 {
+  text-align: center;
+  font-weight: 700;
+  font-family: 'Montserrat';
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin: 15px auto 0;
+  color: rgb(151, 157, 151);
+}
+
+p {
+  color: rgb(151, 157, 151);
+  text-align: center;
+  margin: 0;
+}
+
+button:last-child {
+  padding-bottom: 20px;
+}
+
+.myRow {
+  padding-top: 10vh;
+  height: 100vh;
+}
+
+p span {
+  display: inline-flex;
+}
+
+p span:nth-child(even) {
+  overflow: hidden;
+  transition: 0.7s;
+  letter-spacing: -1em;
+}
+
+p:hover span:nth-child(even) {
+  letter-spacing: 0;
+  text-indent: 1rem;
+  cursor: pointer;
+}
+
+p:hover span {
+  color: rgb(180, 255, 110);
+  transition-delay: 1.5s;
+  transition: 0.7s ease-in-out;
+}
+
+@supports (backdrop-filter: none) {
+  .listButton,
+  h4 {
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+}

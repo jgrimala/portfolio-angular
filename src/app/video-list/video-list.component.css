@@ -1,0 +1,169 @@
+.masthead {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(205, 202, 197);
+  z-index: 1;
+  pointer-events: auto;
+  padding-top: 10vh;
+}
+
+.myRow1 {
+  height: fit-content;
+  padding: 0 5% 0 3%;
+}
+
+
+.myVideo {
+  margin: 2vh 0 4vh 0;
+  width: 100%;
+}
+
+.slider {
+  position: relative;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+  box-sizing: border-box;
+}
+
+.myDescription {
+  margin: 2vh 0;
+  padding: 0 3%;
+  width: 100%;
+}
+
+.thumbnails {
+  display: block;
+  position: relative;
+  margin: 2vh 0;
+  height: fit-content;
+}
+
+.item {
+  margin: 0 0.5vw;
+}
+
+input {
+  display: none;
+}
+
+label {
+  width: auto;
+  object-fit: cover;
+}
+
+label:hover {
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+  transform: scale(1.1);
+}
+
+
+/*add transitions*/
+.myRow1>img {
+  transition: all 0.5s;
+}
+
+.myRow1 input[name='slide_switch'] {
+  display: none;
+}
+
+.myRow1 label {
+  /*Lets add some spacing for the thumbnails*/
+  border: 3px solid #999;
+  cursor: pointer;
+  transition: all 0.5s;
+  /*Default style = low opacity*/
+  opacity: 0.6;
+}
+
+/* click effects */
+.myRow1 input[name='slide_switch']:checked+label {
+  border-color: #666;
+  opacity: 1;
+}
+
+/* Click  changes  opacity(style)*/
+/* the main image */
+.myRow1 input[name='slide_switch']~img {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+/*That hides all main images at a 110% size
+click  will be displayed normal size
+*/
+.myRow1 input[name='slide_switch']:checked+label+img {
+  opacity: 1;
+  transform: scale(1);
+}
+/*Click thumbnail activate the image related to it*/
+
+#stage {
+  height: 100%;
+  background: black;
+  overflow-y: hidden;
+  pointer-events: auto;
+}
+
+.curtain {
+  position: absolute;
+  background: linear-gradient(to left, rgba(45, 45, 46, 0), rgb(97, 97, 97), rgba(71, 71, 71, 0.993), rgb(97, 97, 97)),
+    linear-gradient(to left, rgba(71, 71, 71, 0.997), rgba(97, 97, 97, 0.999), rgba(71, 71, 71, 0.998));
+  background-size: 67px 67px, 53px 53px;
+  width: 52%;
+  height: 100%;
+  transition: width 2s;
+  z-index: 2;
+  /* Places the panels in front of the scene */
+  pointer-events: none;
+}
+
+#curtain-right {
+  right: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  pointer-events: none;
+}
+
+.spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 40;
+  background: radial-gradient(circle, rgba(0, 30, 30, 0), rgba(0, 0, 30, 0.3) 60%), radial-gradient(circle, rgba(0, 30, 30, 0), rgba(0, 30, 30, 0.5) 40%);
+  transition: 3s;
+  pointer-events: auto;
+}
+
+
+#stage:hover #curtain-left {
+  width: 0;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  pointer-events: none;
+}
+
+#stage:hover #curtain-right {
+  width: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  pointer-events: none;
+}
+
+#stage:hover .spotlight {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 767px) {
+  #curtain-left,
+  #curtain-right,
+  #spotlight {
+    visibility: hidden;
+  }
+  .thumbnails {
+    margin-bottom:0;
+    display: flex;
+  }
+  .myDescription {
+    padding: 0;
+  }
+
+}

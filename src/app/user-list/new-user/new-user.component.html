@@ -1,0 +1,41 @@
+<div class="row background-image">
+  <div class="col-sm-6">
+    <h2>Enregistrer un nouvel utilisateur</h2>
+    <form [formGroup]="userForm" (ngSubmit)="onSaveUser()">
+      <!-- on se lie a l'attribut formGroup "userForm" creer dans le ts-->
+      <!-- ngSubmit pour ecouter le submit du button-->
+      <div class="form-group">
+        <label for="firstName">Prenom</label>
+        <input type="text" class="form-control" id="firstName" formControlName="firstName" />
+      </div>
+      <div class="form-group">
+        <!-- formControlName correspond une directive correspond au nom du formControl creer dans le ts-->
+        <label for="lastName">Nom</label>
+        <input type="text" class="form-control" id="lastName" formControlName="lastName" />
+      </div>
+      <div class="form-group">
+        <label for="phone">Téléphone</label>
+        <input type="text" class="form-control" id="phone" formControlName="phone" />
+      </div>
+      <div class="form-group">
+        <label for="email">Courriel</label>
+        <input type="text" class="form-control" id="email" formControlName="email" />
+      </div>
+      <div class="form-group">
+        <label for="linkedin">Lien LinkedIn</label>
+        <input type="text" class="form-control" id="email" formControlName="linkedin" />
+      </div>
+      <div class="form-group">
+        <label for="website">Site Web</label>
+        <input type="text" class="form-control" id="website" formControlName="website" />
+      </div>
+      <div class="form-group">
+        <label for="city">Code postal</label>
+        <input type="text" class="form-control" id="city" formControlName="city" />
+      </div>
+      <button class="btn btn-primary" type="submit" [disabled]="userForm.invalid">
+        Soumettre
+      </button>
+    </form>
+  </div>
+</div>

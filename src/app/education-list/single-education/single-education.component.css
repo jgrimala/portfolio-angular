@@ -1,0 +1,41 @@
+.masthead {
+  background: linear-gradient(rgb(72, 120, 168) 0%, rgb(200, 255, 0) 115%),
+    linear-gradient(to right, rgb(0, 105, 175) 0%, rgb(255, 0, 34) 100%);
+  background-blend-mode: screen;
+}
+
+.container-fluid {
+  background-color: rgb(124 127 92);
+  background-image: url('../../../assets/images/bridge-246913_1920.jpg');
+  background-blend-mode: multiply;
+  mix-blend-mode: hard-light;
+}
+
+h3 {
+  color: white;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+h6 {
+  font-weight: 300;
+  color: white;
+  font-family: 'Montserrat';
+}
+
+.myButton {
+  width: 70%;
+  padding: 1rem;
+}
+
+@supports (backdrop-filter: none) {
+  .myButton {
+    backdrop-filter: blur(6px);
+  }
+}
+
+@media (max-width: 767px) {
+  .myButton, h3, h6 {
+    width: 100%;
+  }
+}

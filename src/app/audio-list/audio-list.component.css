@@ -1,0 +1,89 @@
+:root {
+  --animation-time: 0.5s;
+}
+
+.masthead {
+  min-height: 100vh;
+  background: linear-gradient(rgb(72, 120, 168) 0%, rgb(200, 255, 0) 115%),
+    linear-gradient(to right, rgb(0, 105, 175) 0%, rgb(255, 0, 34) 100%);
+  background-blend-mode: screen;
+}
+
+.container-fluid {
+  min-height: 100vh;
+  padding: 0 5vw;
+  background: url("../../assets/images/speaker-grille-texture.jpg"), rgb(20, 20, 20);
+  mix-blend-mode: multiply;
+}
+
+.row {
+  margin: 12vh 0;
+}
+
+.myListGroupItem {
+  position: relative;
+  width: 80%;
+  border-radius: 50%;
+  letter-spacing: 0;
+  text-shadow: 0 0px 0px black;
+  transition: 0.4s ease;
+  background-color: transparent;
+  border-style: none;
+  margin: 5vh auto;
+}
+
+.myListGroupItem:before {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.myListGroupItem:hover:before {
+  animation: pulse var(--animation-time) ease infinite;
+}
+
+.myListGroupItem:focus {
+  outline: none;
+}
+
+.myListGroupItem:hover #myTitle,
+.myListGroupItem:hover #myYear,
+.myListGroupItem:hover #myDescription {
+
+  transform: scale(1.010101);
+  letter-spacing: 1px;
+  text-shadow: 0 3px 8px black;
+  transition: 0.4s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.99);
+  }
+
+  10% {
+    box-shadow: 0 0 20px 0 rgba(28, 28, 29, 0.5);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  40% {
+    box-shadow: 0 0 20px 300px rgba(28, 28, 29, 0);
+
+  }
+
+  90% {
+    transform: scale(0.99);
+  }
+
+  100% {
+    box-shadow: 0 0 20px 0 rgba(28, 28, 29, 0);
+  }
+}

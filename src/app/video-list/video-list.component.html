@@ -1,0 +1,25 @@
+<div id="stage">
+  <div id="curtain-left" class="curtain"></div>
+  <div id="curtain-right" class="curtain"></div>
+  <div class="spotlight"></div>
+  <header class="masthead">
+    <div class="row myRow1">
+      <div class='col-md-2 thumbnails'>
+        <div class='item' *ngFor="let video of videoList; let i = index">
+          <input type="radio" [(ngModel)]="radioSelected" name="slide_switch" value="{{video.image}}" [id]="'id'+i"
+            (change)="onVideoChange(video)" />
+          <label [for]="'id'+i">
+            <img [src]="video.image" width="100%" />
+          </label>
+        </div>
+      </div>
+      <div class="col-md-10 myVideo">
+        <div class="slider embed-responsive embed-responsive-16by9" [innerHTML]='radioSel.vimeoEmb|safeHtml'></div>
+        <div class="myDescription">
+          <h3>{{ radioSel.title}} - {{ radioSel.year }}</h3>
+          <p [innerHtml]="radioSel.description"></p>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>

@@ -1,0 +1,19 @@
+<body class="masthead">
+  <div class="container-fluid"> 
+    <div class="row myRow1">
+      <h2>Éducation</h2>
+    </div>
+    <div class="myRow2">
+        <div @list class="list-group myListGroup">
+
+          <button @items class="myButton" *ngFor="let education of educationList; let i = index"
+            (click)="onViewEducation(i)">
+            <h6>
+              {{ education.program }}
+            </h6>
+            <p>{{ education.school }}</p>
+          </button>
+        </div>
+    </div>
+  </div> 
+</body>

@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ video.title }} - {{ video.year }}</h1>
+    <p>{{ video.description }}</p>
+    <div [innerHTML]="video.vimeoEmb | safeHtml"></div>
+    <button class="btn btn-default" (click)="onBack()">Retour</button>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<body class="masthead">
+  <div class="container-fluid ">
+    <div class="row align-items-center">
+      <div class="col-12 text-center">
+        <button *ngFor="let biography of biographyList; let i = index" (click)="onViewBiography(i)">
+          <!-- CSS animation on title -->
+          <h3 class="glitch" [attr.myValue]="'MAIS QUI EST JULIE G ?'">
+            MAIS QUI EST JULIE G ?
+          </h3>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>

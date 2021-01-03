@@ -1,0 +1,22 @@
+<body class="masthead">
+  <div class="container-fluid">
+    <div class="row body">
+      <div class="col-xs-12">
+        <h2>{{ audio.title }}</h2>
+        <p>{{ audio.year }}</p>
+        <p>{{ audio.description }}</p>
+      </div>
+      <div id="audioContextSuspended">
+        <div>
+          <canvas id="fft"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="credits">
+      <button class="btn btn-default" (click)="onBack()">Retour</button>
+      <a href="https://codepen.io/michaelphipps/pen/vaaMLb">
+        <p><strong>SoundVisualizer</strong> <small> by MIKAL</small></p>
+      </a>
+    </div>
+  </div>
+</body>

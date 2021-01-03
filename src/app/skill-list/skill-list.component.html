@@ -1,0 +1,41 @@
+<body class="masthead">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 myCol">
+        <h4>BACKEND</h4>
+        <button *ngFor="let skill of skillList; let i = index" class="listButton">
+          <p *ngIf="skill.category==='Backend'"><span>{{ skill.skillName }}</span><span
+              id="oneSpace">{{ skill.rating }}%</span></p>
+        </button>
+      </div>
+      <div class="col-lg-4 col-md-6 myCol">
+        <h4>FRONTEND</h4>
+        <button *ngFor="let skill of skillList; let i = index" class='listButton'>
+          <p *ngIf="skill.category==='Frontend'"><span>{{ skill.skillName }}</span><span
+              id="oneSpace">{{ skill.rating }}%</span></p>
+        </button>
+      </div>
+      <div class="col-lg-4 col-md-6 myCol">
+        <h4>AUTRES</h4>
+        <button *ngFor="let skill of skillList; let i = index" class='listButton'>
+          <p *ngIf="skill.category==='Autres'"><span>{{ skill.skillName }}</span><span
+              id="oneSpace">{{ skill.rating }}%</span></p>
+        </button>
+      </div>
+      <div class="col-lg-5 col-md-6 myCol">
+        <h4>AUDIO</h4>
+        <button *ngFor="let skill of skillList; let i = index" class='listButton'>
+          <p *ngIf="skill.category==='Musique et Sons'"><span>{{ skill.skillName }}</span><span
+              id="oneSpace">{{ skill.rating }}%</span></p>
+        </button>
+      </div>
+      <div class="col-lg-5 col-md-6 myCol">
+        <h4>DESIGN</h4>
+        <button *ngFor="let skill of skillList; let i = index" class='listButton'>
+          <p *ngIf="skill.category==='Design'"><span>{{ skill.skillName }}</span><span
+              id="oneSpace">{{ skill.rating }}%</span></p>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>

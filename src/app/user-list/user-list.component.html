@@ -1,0 +1,20 @@
+<body class="masthead">
+  <div class="container-fluid ">
+    <div class="row align-items-center">
+      <div class="col-12 text-center">
+        <div class="list-group">
+          <div class="list-group-item myButton" *ngFor="let user of userList; let i = index">
+            <h2 class="list-group-item-heading">
+              {{ user.firstName }} {{ user.lastName }}
+            </h2>
+            <p class="list-group-item-text">{{ user.phone }}</p>
+            <p class="list-group-item-text">{{ user.email }}</p>
+            <p class="list-group-item-text"><a href="https://www.linkedin.com/in/julie-parant-grimala-4baa0924/">{{ user.linkedin }}</a></p>
+            <p class="list-group-item-text">{{ user.website }}</p>
+            <p class="list-group-item-text">{{ user.city }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

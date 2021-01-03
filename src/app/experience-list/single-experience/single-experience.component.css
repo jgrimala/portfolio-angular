@@ -1,0 +1,35 @@
+.masthead {
+  background: linear-gradient(rgb(72, 120, 168) 0%, rgb(200, 255, 0) 115%),
+    linear-gradient(to right, rgb(0, 105, 175) 0%, rgb(255, 0, 34) 100%);
+  background-blend-mode: screen;
+}
+
+.container-fluid {
+  background-color: rgb(134, 139, 84);
+  background-image: url('../../../assets/images/architecture-768432_1920_2.jpg');
+  background-blend-mode: multiply;
+  mix-blend-mode: darken;
+}
+
+.myButton {
+  padding: 1rem 0 1.5rem;
+  width: 70vw;
+}
+
+h3 {
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+h6 {
+  font-weight: 300;
+  color: white;
+  font-family: 'Montserrat';
+}
+
+@supports (backdrop-filter: none) {
+  .myButton {
+    backdrop-filter: hue-rotate(-40deg);
+  }
+}

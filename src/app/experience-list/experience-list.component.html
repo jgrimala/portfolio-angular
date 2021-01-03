@@ -1,0 +1,17 @@
+<body class="masthead">
+  <div class="container-fluid ">
+    <div class="row myRow1">
+      <h2>Expérience</h2>
+    </div>
+    <div class="row myRow2">
+      <div @list2 class="list-group myListGroup">
+        <button @items2 class="myButton" *ngFor="let experience of experiencesList; let i = index"
+          (click)="onViewExperience(i)">
+            <h6 [innerHTML]="experience.jobTitle" data-splitting>
+            </h6>
+            <p>{{ experience.company }}</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>

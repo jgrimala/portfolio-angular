@@ -1,0 +1,225 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+router-outlet~* {
+  min-height: 100vh;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Montserrat", "Raleway", sans-serif;
+  width: 100%;
+}
+
+/************************************************************
+FONTS
+************************************************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", "Helvetica", sans-serif;
+  text-rendering: optimizeLegibility;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.6rem;
+}
+
+h6 {
+  font-size: 1.3rem;
+}
+
+p {
+  font-size: 1.1rem;
+  font-family: 'Raleway';
+  font-weight: 400; 
+}
+
+
+p span.special {
+  font-size: 600%;
+  color: black;
+  font-family: 'Montserrat';
+  font-weight: 700;
+}
+
+/************************************************************
+CONTAINERS
+************************************************************/
+.masthead {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+.container-fluid {
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+  width: 100%;
+}
+
+.col-12 {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.myRow {
+  min-height: 100vh;
+}
+
+.myListGroup {
+  justify-content: center;
+  box-shadow: none;
+  margin: 15vh auto;  
+  width: fit-content;
+  
+}
+
+/************************************************************
+BUTTONS
+************************************************************/
+
+.myButton {
+  border-style: none;
+  letter-spacing: 0;
+  text-shadow: 0 0px 0px black;
+  transition: 0.4s ease;
+  color: white;
+  margin: 0.6rem auto;
+  background-color: transparent;
+  align-self: center;
+}
+.myButton:hover{
+outline: none;
+letter-spacing: 1px;
+text-shadow: 0 3px 8px black;
+transition: 0.4s ease;
+}
+.myButton:focus {
+  outline: none;
+}
+
+/************************************************************
+Pour animation de single-biography 
+************************************************************/
+/*h1.titleCenter {
+  font-size: 10vw;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-family: 'Raleway';
+  display: grid;
+  place-items: center;
+  color: rgb(194, 205, 198);
+  padding-top: 20vh;
+  position: absolute;
+  top: 15vh;
+}*/
+
+/*h1.titleCenter .char {
+  --delay: calc((var(--char-index) + 1) * 200ms);
+  animation: breathe 2s linear infinite alternate;
+  animation-delay: var(--delay);
+}
+
+h1.titleCenter span.word {
+  position: absolute;
+  width: 100%;
+}
+h1.titleCenter:hover span {
+  animation-play-state: paused;
+}*/
+
+/*@keyframes breathe {
+  0% {
+    transform:scale(1);
+    color: rgb(194, 205, 198);
+
+    text-shadow:rgb(26, 27, 27) 0px 0px 0px;
+  }
+  100% {
+    transform:scale(1.1);
+    color: rgb(225, 238, 230);
+    text-shadow:
+                rgb(255, 52, 120) 0px 0px 15px,
+                rgb(46, 161, 255) 0px 0px 25px, 
+                rgb(26, 27, 27) 0px 0px 35px
+  }
+
+}*/
+
+/* Mobile devices - sm */
+@media (min-width: 576px) {
+  .text {
+    font-size: 16px;
+  }
+}
+/* iPads, Tablets, - md */
+@media (min-width: 768px) {
+  .text {
+    font-size: 16px;
+  }
+}
+/* Small screens, laptops - lg */
+@media (min-width: 992px) {
+  .text {
+    font-size: 16px;
+  }
+}
+
+/* large screens, TV - xl */
+@media (min-width: 1200px) {
+  .text {
+    font-size: 16px;
+  }
+}

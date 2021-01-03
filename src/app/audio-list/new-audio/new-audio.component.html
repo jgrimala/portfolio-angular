@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-sm-6">
+    <h2>Enregistrer une compétence</h2>
+    <form [formGroup]="audioForm" (ngSubmit)="onSaveAudio()">
+      <!-- on se lie a l'attribut formGroup "userForm" creer dans le ts-->
+      <!-- ngSubmit pour ecouter le submit du button-->
+
+      <div class="form-group">
+        <label for="title">Titre</label>
+        <input type="text" class="form-control" id="title" formControlName="title" />
+      </div>
+      <div class="form-group">
+        <label for="year">Année</label>
+        <input type="text" class="form-control" id="year" formControlName="year" />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" formControlName="description" />
+      </div>
+      <div class="form-group">
+        <label for="file">FIle</label>
+        <input type="text" class="form-control" id="file" formControlName="file" />
+      </div>
+     
+      <!--<div class="form-group">
+        <h4>Ajouter un fichier audio</h4>
+        <input type="file" (change)="detectFiles($event)"
+               class="form-control" accept=".mp3, .mpeg">
+        <p class="text-success" *ngIf="fileUploaded">Fichier chargé !</p>
+    </div>-->
+
+      <button class="btn btn-primary" [disabled]="audioForm.invalid || fileIsUploading" type="submit">
+        Soumettre
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+div.card {
+    width: 15vw !important;
+    height: 20vh !important;
+    margin: 3% !important;
+    border-radius: 10px;
+}
+
+.portofolioTitle {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Raleway';
+}
+.bg-1 {
+    background-color: rgb(213, 255, 96);
+}
+.bg-2 {
+    background-color: rgb(96, 255, 130);
+}
+.bg-3 {
+    background-color: rgb(96, 250, 255);
+}
+.bg-4 {
+    background-color: rgb(96, 138, 255);
+}
+.bg-5 {
+    background-color: rgb(183, 96, 255);
+}
+.bg-6 {
+    background-color: rgb(255, 96, 175);
+}
+.bg-7 {
+    background-color: rgb(255, 96, 96);
+}

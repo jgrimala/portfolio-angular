@@ -1,0 +1,89 @@
+.masthead {
+  background:
+    linear-gradient(#178fb8 -40%, rgb(168, 136, 60) 120%);
+}
+
+.container-fluid {
+  background-color: rgb(255, 255, 255);
+  background-image: url("../../assets/images/water.jpg");
+  mix-blend-mode: luminosity;
+}
+
+h1 {
+  font-size: 13vw;
+  font-weight: 900;
+}
+
+h2 {
+  font-family: 'Oswald';
+  /* 'Raleway' */
+  font-size: 7vw;
+  font-weight: 600;
+}
+
+h1,
+h2 {
+  border-style: none;
+  margin: 0 auto;
+  background-color: transparent;
+  color: rgb(30 45 33);
+  text-align: center;
+  mix-blend-mode: multiply;
+  cursor: default;
+  width: 100%;
+  height: fit-content;
+  transition: 0.3s ease;
+}
+
+h1:hover,
+h1:active,
+h2:hover,
+h2:active {
+  outline: none;
+  text-decoration: none;
+}
+
+/* text change on hover */
+h1:after {
+  content: 'JULIE G';
+  transition: font-size 0.3s ease;
+}
+
+h1:hover:after {
+  font-size: 12vw;
+  transition: font-size 1s ease;
+  content: 'DEV. WEB';
+}
+
+h2:after {
+  content: 'PORTFOLIO';
+  transition: font-size 0.3s ease;
+}
+
+h2:hover:after {
+  font-size: 6vw;
+  opacity: 1;
+  transition: font-size 1s ease;
+  content: 'Angular 10-Bootstrap-Firebase';
+}
+
+/***************************************
+ Shine effet 
+***************************************/
+.effect-shine:hover {
+  mask-image: linear-gradient(-90deg, rgb(0, 0, 0) 30%, rgba(255, 255, 255, 0.5) 50%, rgb(0, 0, 0) 70%);
+  mask-size: 200%;
+  animation: shine 2s infinite;
+  mix-blend-mode: multiply;
+}
+
+/* effect-shine animation */
+@keyframes shine {
+  from {
+    mask-position: 150%;
+  }
+
+  to {
+    mask-position: -50%;
+  }
+}

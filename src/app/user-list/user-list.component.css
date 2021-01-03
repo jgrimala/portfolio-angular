@@ -1,0 +1,46 @@
+.masthead {
+  min-height: 100vh;
+  width: 100%;
+  background:
+    linear-gradient(rgb(255 251 133) 0%, rgb(255 223 216) 100%);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.container-fluid {
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/images/ocean.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  mix-blend-mode: luminosity;
+}
+
+.list-group-item,
+.myButton {
+  font-weight: 600;
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+  font-size: larger;
+  margin: 25vh 0;
+  padding: 3%;
+  width: 100%;
+  cursor: pointer;
+}
+
+h2, p, a {
+  color: #fbffe6;
+  font-weight: 600;
+}
+.myButton:focus {
+  outline: none;
+}
+
+@supports (backdrop-filter: none) {
+  .list-group-item {
+    backdrop-filter: blur(4px);
+  }
+}
